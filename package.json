@@ -1,0 +1,25 @@
+{
+  "name": "analytics.js-loader",
+  "version": "1.0.0",
+  "description": "Asynchronously load segment.com analytics.js with an npm module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vvo/analytics.js-loader.git"
+  },
+  "keywords": [
+    "analytics.js",
+    "segment.com",
+    "loader",
+    "browserify"
+  ],
+  "author": "Vincent Voyer <vincent@zeroload.net>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vvo/analytics.js-loader/issues"
+  },
+  "homepage": "https://github.com/vvo/analytics.js-loader"
+}
