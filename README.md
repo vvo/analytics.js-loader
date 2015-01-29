@@ -1,8 +1,5 @@
 # analytics.js-loader
 
-Asynchronously load segment.com's
-[analytics.js](https://segment.com/docs/libraries/analytics.js/).
-
 This is the [segment.com snippet](https://segment.com/docs/libraries/analytics.js/quickstart/#step-1-copy-the-snippet) as a module.
 
 *Slightly* modified to be [browserify](http://browserify.org/) compatible.
