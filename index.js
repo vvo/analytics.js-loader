@@ -1,15 +1,23 @@
 module.exports = load;
 
 function load(opts) {
-  if (global.analytics) {
-    return global.analytics;
-  }
-
   // Create a queue, but don't obliterate an existing one!
   var analytics = global.analytics = global.analytics || [];
 
   // If the real analytics.js is already on the page return.
-  if (analytics.initialize) return analytics;
+  if (analytics.initialize) return;
+
+  // If the snippet was invoked already show an error.
+  if (analytics.invoked) {
+    if (window.console && console.error) {
+      console.error('Segment snippet included twice.');
+    }
+    return;
+  }
+
+  // Invoked flag, to make sure the snippet
+  // is never invoked twice.
+  analytics.invoked = true;
 
   // A list of the methods in Analytics.js to stub.
   analytics.methods = [
@@ -76,6 +84,4 @@ function load(opts) {
   // you'd like to manually name or tag the page, edit or
   // move this call however you'd like.
   analytics.page();
-
-  return analytics;
 }
