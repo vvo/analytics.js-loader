@@ -83,5 +83,7 @@ function load(opts) {
   // Make the first page call to load the integrations. If
   // you'd like to manually name or tag the page, edit or
   // move this call however you'd like.
-  analytics.page();
+  if (!opts.skipPageCall) {
+    analytics.page();
+  }
 }
