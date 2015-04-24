@@ -14,7 +14,8 @@ npm install analytics.js-loader --save
 
 ```js
 require('analytics.js-loader')({
-  writeKey: 'YOUR_WRITE_KEY'
+  writeKey: 'YOUR_WRITE_KEY',
+  skipPageCall: false
 });
 
 global.analytics.identify('1e810c197e', {
@@ -27,5 +28,3 @@ global.analytics.track('Signed Up', {
   source: 'Analytics Academy'
 });
 ```
-
-
