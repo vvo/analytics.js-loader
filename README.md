@@ -15,6 +15,7 @@ npm install analytics.js-loader --save
 ```js
 require('analytics.js-loader')({
   writeKey: 'YOUR_WRITE_KEY',
+  // you can skip the first analytics.page() call if needed, #1
   skipPageCall: false
 });
 
