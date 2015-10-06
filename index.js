@@ -1,9 +1,8 @@
 module.exports = load;
 
-function load(opts) {
-  // Create a queue, but don't obliterate an existing one!
-  var analytics = global.analytics = global.analytics || [];
+var analytics = [];
 
+function load(opts) {
   // If the real analytics.js is already on the page return.
   if (analytics.initialize) return;
 
@@ -86,4 +85,6 @@ function load(opts) {
   if (!opts.skipPageCall) {
     analytics.page();
   }
+  
+  return analytics;
 }
