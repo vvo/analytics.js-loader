@@ -1,3 +1,8 @@
+# 2.0.0 (2015-10-06)
+
+  * fix loader to not pollute global scope
+    - the function returns the analytics object now instead of messing with globals
+
 # 1.1.0 (2015-04-24)
 
   * add skipPageCall param
