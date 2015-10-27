@@ -29,6 +29,7 @@ function load(opts) {
     'group',
     'track',
     'ready',
+    'reset',
     'alias',
     'page',
     'once',
