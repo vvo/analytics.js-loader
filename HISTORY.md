@@ -1,3 +1,7 @@
+# 2.1.0 (2015-10-27)
+
+* add reset method
+
 # 2.0.0 (2015-10-06)
 
   * fix loader to not pollute global scope
