@@ -63,8 +63,8 @@ function load(opts) {
     var script = document.createElement('script');
     script.type = 'text/javascript';
     script.async = true;
-    script.src = ('https:' === document.location.protocol
-      ? 'https://' : 'http://')
+    script.src = ('http:' === document.location.protocol
+      ? 'http://' : 'https://')
       + 'cdn.segment.com/analytics.js/v1/'
       + key + '/analytics.min.js';
 
@@ -86,6 +86,6 @@ function load(opts) {
   if (!opts.skipPageCall) {
     analytics.page();
   }
-  
+
   return analytics;
 }

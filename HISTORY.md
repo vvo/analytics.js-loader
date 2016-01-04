@@ -1,3 +1,8 @@
+# 2.1.1 (2016-01-01)
+
+* use https: protocol by default
+  - segment script is loaded from a secure request if current protocol is not http: (for chrome-extension: for example)
+
 # 2.1.0 (2015-10-27)
 
 * add reset method
@@ -18,4 +23,3 @@
 # 1.0.0 (2015-01-29)
 
   * initial
-
