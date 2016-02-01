@@ -87,5 +87,29 @@ function load(opts) {
     analytics.page();
   }
 
-  return analytics;
+  /*
+  * The analytics.js-loader module returns the "initial" analytics
+  * object, which is basically just a queue to hold events until the
+  * "real" one is loaded with a global script.  Problem is, the "real"
+  * one simply replaces `window.analytics`, and doesn't change over
+  * this initial "queue" object, meaning that nothing gets registered
+  * after the "real" one is loaded - things just keep adding to the queue.
+  *
+  * This is why we save off `initialAnalytics`, and then always run
+  * methods through `window.analytics`, which might be the queue, and
+  * might be the real one.
+  */
+
+  var initialAnalytics = analytics;
+  var actualAnalytics = {};
+
+  window.analytics = initialAnalytics;
+
+  initialAnalytics.methods.forEach(function(method) {
+    actualAnalytics[method] = function() {
+      window.analytics[method].apply(window.analytics, arguments);
+    }
+  });
+
+  return actualAnalytics;
 }

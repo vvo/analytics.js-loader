@@ -1,3 +1,7 @@
+# 2.1.2 (2016-01-31)
+
+* fix loader to compensate for segment queue object
+
 # 2.1.1 (2016-01-01)
 
 * use https: protocol by default
