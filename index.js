@@ -67,6 +67,9 @@ function load(opts) {
       ? 'http://' : 'https://')
       + 'cdn.segment.com/analytics.js/v1/'
       + key + '/analytics.min.js';
+    if (opts.onload) {
+      script.onload = opts.onload;
+    }
 
     // Insert our script next to the first script element.
     var first = document.getElementsByTagName('script')[0];
